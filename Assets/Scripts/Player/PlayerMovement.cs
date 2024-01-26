@@ -110,17 +110,17 @@ public class PlayerMovement : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
         {
-			OnJumpInput();
+			//OnJumpInput();
         }
 
 		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.J))
 		{
-			OnJumpUpInput();
+			//OnJumpUpInput();
 		}
 
 		if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
 		{
-			OnDashInput();
+			//OnDashInput();
 		}
 		#endregion
 
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 			{
 				if(LastOnGroundTime < -0.1f)
                 {
-					AnimHandler.justLanded = true;
+					/*AnimHandler.justLanded = true;*/
                 }
 
 				LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
@@ -184,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
 				_isJumpFalling = false;
 				Jump();
 
-				AnimHandler.startedJumping = true;
+				//AnimHandler.startedJumping = true;
 			}
 			//WALL JUMP
 			else if (CanWallJump() && LastPressedJumpTime > 0)
