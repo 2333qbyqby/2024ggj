@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	//just paste in all the parameters, though you will need to manuly change all references in this script
 	public PlayerData Data;
 
-	#region COMPONENTS
+	#region 组件
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 	public PlayerAnimator AnimHandler { get; private set; }
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
 	#endregion
 
-	#region INPUT PARAMETERS
+	#region 输入参数
 	private Vector2 _moveInput;
 
 	public float LastPressedJumpTime { get; private set; }
@@ -102,8 +102,9 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
-		_moveInput.x = Input.GetAxisRaw("Horizontal");
-		_moveInput.y = Input.GetAxisRaw("Vertical");
+		//_moveInput.x = Input.GetAxisRaw("Horizontal");
+		//_moveInput.y = Input.GetAxisRaw("Vertical");
+		_moveInput=PlayerInput.Instance.GetPlayerMoveVector();
 
 		if (_moveInput.x != 0)
 			CheckDirectionToFace(_moveInput.x > 0);
