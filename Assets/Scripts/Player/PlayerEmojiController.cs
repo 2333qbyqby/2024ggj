@@ -12,6 +12,10 @@ public class PlayerEmojiController : MonoBehaviour
 
     [Header("StateCount")]
     public int count;
+    private void Start()
+    {
+        ownMovement = GetComponent<PlayerMovement>();
+    }
     private void Update()
     {
         if (ownMovement.IsJumping)
