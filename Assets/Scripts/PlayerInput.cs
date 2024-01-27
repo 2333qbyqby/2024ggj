@@ -11,6 +11,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     private InputSystem playerInputAction;//不在开头定义就不是全局变量了
     public UnityEvent playerJumpStartEvent;
     public UnityEvent playerJumpEndEvent;
+    public UnityEvent playerInteractEvent;
     override public void Awake()
     {
         base.Awake();
@@ -19,8 +20,13 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         playerInputAction.Player.Enable();
         playerInputAction.Player.Jump.started += Jump_started;//给Player的jump动作执行后触发的事件添加函数4
         playerInputAction.Player.Jump.canceled += Jump_canceled;
+        playerInputAction.Player.Interact.performed += Interact_performed;
     }
-    
+
+    private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        playerInteractEvent?.Invoke();
+    }
 
     private void Jump_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
