@@ -1,4 +1,4 @@
-Base path: 'E:/unity/2022.3.6f1c1/Editor/Data', plugins path 'E:/unity/2022.3.6f1c1/Editor/Data/PlaybackEngines'
+Base path: 'E:/unity安装路径/2022.3.6f1c1/Editor/Data', plugins path 'E:/unity安装路径/2022.3.6f1c1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Cmd: preprocess

@@ -3192,107 +3192,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c01c15ada6eb96849898884dfcbf1478, type: 3}
---- !u!1 &1058639229
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1058639233}
-  - component: {fileID: 1058639232}
-  - component: {fileID: 1058639231}
-  - component: {fileID: 1058639230}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1058639230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058639229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1058639231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058639229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1058639232
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058639229}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1058639233
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058639229}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1078912098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3955,6 +3854,9 @@ MonoBehaviour:
   changeTreesEmoji:
     m_PersistentCalls:
       m_Calls: []
+  isChangeToFlower: 0
+  ifHit: 0
+  ifjumpSeveralTimes: 0
 --- !u!4 &1221082739
 Transform:
   m_ObjectHideFlags: 0
@@ -5425,6 +5327,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bf806cd436e64a9428713a795bc5e5ee, type: 3}
   - {fileID: 21300000, guid: 977eb1b253b80da4ea5870e80d28ef2e, type: 3}
   - {fileID: 21300000, guid: 180f9a1f08f398e44a6103f8051b7eb5, type: 3}
+  - {fileID: 21300000, guid: 921cdeccfa55d414b9fa6d87d96213cc, type: 3}
+  - {fileID: 21300000, guid: 0d38d74b05b3a4645a73f2a420b334fb, type: 3}
+  - {fileID: 21300000, guid: 985112f46f27c9a47bbeaecd76768076, type: 3}
+  - {fileID: 21300000, guid: 731930470db8cad4ea3b8a4d06a7d09c, type: 3}
+  - {fileID: 21300000, guid: 1848ca4c25a10e341910e598e3e723c7, type: 3}
+  - {fileID: 21300000, guid: a469d5ea419fa2f48b4227880e0befd2, type: 3}
+  - {fileID: 21300000, guid: 079e7a717252504448a806f8af9fb7a4, type: 3}
+  - {fileID: 21300000, guid: 4c7f626331482d3448f428c4ca374e18, type: 3}
 --- !u!4 &1715961123
 Transform:
   m_ObjectHideFlags: 0
@@ -6539,6 +6449,5 @@ SceneRoots:
   - {fileID: 1715961123}
   - {fileID: 150644763}
   - {fileID: 942995934}
-  - {fileID: 1058639233}
   - {fileID: 1244456545}
   - {fileID: 1850914889}

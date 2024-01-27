@@ -23,11 +23,14 @@ public class PlayerState : MonoSingleton<PlayerState>
 
     private void Update()
     {
-        if (true)
-        {
-            changeTreesEmoji?.Invoke("tree1");
-        }
+            
     }
+
+    public void ChangeAllTreeEmoji() 
+    {
+        changeTreesEmoji?.Invoke("tree1");
+    }
+
 }  
    
 
