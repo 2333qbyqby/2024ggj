@@ -37,4 +37,14 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     {
         return playerInputAction.Player.Move.ReadValue<Vector2>();
     }
+
+
+    public void EnablePlayerInput()
+    {
+        playerInputAction.Player.Enable();
+    }
+    public void DisablePlayerInput()
+    {
+        playerInputAction.Player.Disable();
+    }
 }

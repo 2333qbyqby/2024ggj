@@ -14,11 +14,12 @@ public class PlayerMovement : MonoBehaviour
 	//Scriptable object which holds all the player's movement parameters. If you don't want to use it
 	//just paste in all the parameters, though you will need to manuly change all references in this script
 	public PlayerData Data;
-
+	[Header("动画脚本")]
+	public PlayerAnimator playerAnimator;
 	#region 组件
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
-	public PlayerAnimator AnimHandler { get; private set; }
+	//public PlayerAnimator AnimHandler { get; private set; }
 	#endregion
 
 	#region STATE PARAMETERS
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
-		AnimHandler = GetComponent<PlayerAnimator>();
+		
 	}
 
 	private void Start()
@@ -102,8 +103,6 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
-		//_moveInput.x = Input.GetAxisRaw("Horizontal");
-		//_moveInput.y = Input.GetAxisRaw("Vertical");
 		_moveInput=PlayerInput.Instance.GetPlayerMoveVector();
 
 		if (_moveInput.x != 0)
@@ -134,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
 				if(LastOnGroundTime < -0.1f)
                 {
 					/*AnimHandler.justLanded = true;*/
+					playerAnimator.SetJump(false);
                 }
 
 				LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
@@ -288,6 +288,8 @@ public class PlayerMovement : MonoBehaviour
 				Run(Data.wallJumpRunLerp);
 			else
 				Run(1);
+				playerAnimator.SetRun(_moveInput.magnitude==0?false:true);
+				
 		}
 		else if (_isDashAttacking)
 		{
@@ -304,12 +306,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnJumpInput()
 	{
 		LastPressedJumpTime = Data.jumpInputBufferTime;
+		playerAnimator.SetJump(true);
 	}
 
 	public void OnJumpUpInput()
 	{
 		if (CanJumpCut() || CanWallJumpCut())
+		{
 			_isJumpCut = true;
+		}
 	}
 
 	public void OnDashInput()
