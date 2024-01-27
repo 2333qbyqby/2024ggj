@@ -8,7 +8,6 @@ public class Trees : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private void OnEnable()
     {
-        //PlayerState.Instance.changeTreesEmoji.AddListener(ChangeTreeSprite);
     }
     private void Start()
     {
@@ -16,6 +15,7 @@ public class Trees : MonoBehaviour
         int r = Random.Range(0, ints.Length);
         Debug.Log("tree" + ints[r]);
         EmojiManager.Instance.ChangeEmoji(spriteRenderer, "tree" + ints[r]);
+        PlayerState.Instance.changeTreesEmoji.AddListener(ChangeTreeSprite);
         //spriteRenderer.sprite = EmojiManager.Instance.spritesDict[];
     }
     public void ChangeTreeSprite(string emojiName)

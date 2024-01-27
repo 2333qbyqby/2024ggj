@@ -12,7 +12,10 @@ public class PlayerState : MonoSingleton<PlayerState>
     }
 
     public UnityEvent<string> changeTreesEmoji;
-
+    [Header("Íæ¼Ò×´Ì¬")]
+    public bool isChangeToFlower;
+    public bool ifHit;
+    public bool ifjumpSeveralTimes;
     private void OnEnable()
     {
         
@@ -22,7 +25,7 @@ public class PlayerState : MonoSingleton<PlayerState>
     {
         if (true)
         {
-            //changeTreesEmoji?.Invoke();
+            changeTreesEmoji?.Invoke("tree1");
         }
     }
 }  
