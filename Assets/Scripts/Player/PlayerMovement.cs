@@ -14,7 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 	//public PlayerAnimator AnimHandler { get; private set; }
+	public PlayerEmojiController emojiController;
 	#endregion
+
 
 	#region STATE PARAMETERS
 	//Variables control the various actions the player can perform at any time.
@@ -128,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
                 {
 					/*AnimHandler.justLanded = true;*/
 					playerAnimator.SetJump(false);
+					StartCoroutine(emojiController.ResetEmoji());//重置脸
                 }
 
 				LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
@@ -270,7 +273,11 @@ public class PlayerMovement : MonoBehaviour
 			//No gravity when dashing (returns to normal once initial dashAttack phase over)
 			SetGravityScale(0);
 		}
-		#endregion
+        #endregion
+        #region emoji
+		emojiController.JumpChangeEmoji(RB.velocity);//表情变化
+		emojiController.JumpChangeEmoji(RB.velocity);//表情变化
+        #endregion
     }
 
     private void FixedUpdate()
@@ -301,6 +308,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		LastPressedJumpTime = Data.jumpInputBufferTime;
 		playerAnimator.SetJump(true);
+
 	}
 
 	public void OnJumpUpInput()

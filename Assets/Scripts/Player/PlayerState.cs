@@ -21,10 +21,7 @@ public class PlayerState : MonoSingleton<PlayerState>
         
     }
 
-    private void Update()
-    {
-            
-    }
+    
 
     public void ChangeAllTreeEmoji() 
     {

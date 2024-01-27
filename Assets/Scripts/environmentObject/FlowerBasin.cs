@@ -31,6 +31,8 @@ public class FlowerBasin : MonoBehaviour
     {
         if(collision.gameObject.layer == 7)
         {
+            PlayerEmojiController playerEmojiController = collision.gameObject.GetComponent<PlayerEmojiController>();
+            playerEmojiController.emojiType = EmojiType.horribleflower;
             Debug.Log("±ä»¨");
             EmojiManager.Instance.ChangeEmoji(collision.gameObject.GetComponent<PlayerEmojiController>().spriteRenderer,EmojiType.horribleflower.ToString());
 
