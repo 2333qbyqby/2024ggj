@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using fivuvuvUtil;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
     [Header("玩家道具数量")]
     public int appleCount;
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    
 
+
+
+    public void ReStartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void PlayerDeath(GameObject player)
     {
         //TODO UI

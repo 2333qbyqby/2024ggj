@@ -6,6 +6,7 @@ public class FlowerBasin : MonoBehaviour
 {
     public float gravity;
     public float fallTime=3f;
+    [SerializeField] private bool ifAdded;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 7)
@@ -22,7 +23,12 @@ public class FlowerBasin : MonoBehaviour
 
     public void FlowerBasinFall()
     {
+        if (!ifAdded)
+        {
+
         this.gameObject.AddComponent<Rigidbody2D>().gravityScale=gravity;
+            ifAdded = true;
+        }
         
     }
     

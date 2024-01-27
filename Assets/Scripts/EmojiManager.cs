@@ -16,9 +16,7 @@ public class EmojiManager :MonoSingleton<EmojiManager>
         }
     }
     private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-        
+    {        
     }
 
     public void ChangeEmoji(SpriteRenderer spriteRenderer,string emojiName)//公用函数，传入表情图片和表情名字
