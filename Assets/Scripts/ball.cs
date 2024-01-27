@@ -11,5 +11,14 @@ public class ball : MonoBehaviour
             Debug.Log("«Ú‘“µΩ¡À»À");
             Destroy(gameObject);
         }
+        
+    }
+    private void OnEnable()
+    {
+        Invoke("DestoryItself", 3f);
+    }
+    public void DestoryItself()
+    {
+        Destroy(gameObject);
     }
 }

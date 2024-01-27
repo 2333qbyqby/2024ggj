@@ -51,6 +51,7 @@ public class EnemyAttack : MonoBehaviour
             shootChangeTimer = shootTimer;
             GameObject ball = Instantiate(Ball, transform.position, Quaternion.identity);
             ball.AddComponent<Rigidbody2D>().gravityScale = 0.6f;
+            
         }
         
 

@@ -5,6 +5,8 @@ using fivuvuvUtil;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+    [Header("玩家道具数量")]
+    public int appleCount;
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
