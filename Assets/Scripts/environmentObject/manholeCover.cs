@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class manholeCover : MonoBehaviour
 {
+    public Animator animator;
     public float force=3f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,8 +16,10 @@ public class manholeCover : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity=Vector2.zero;
             playerMovement.RefreshGravityScale();
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force), ForceMode2D.Impulse);
+            animator.SetTrigger("IsTrigger");
+
         }
-        
+
     }
 
     public IEnumerator StartShootCR(Collider2D collision)

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890261524369357506}
   - component: {fileID: 7955580493854987377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cloudVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1777252513
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1ff6aeb8c992a73408dbf3e865c4ca4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6914734531095330864}
   - component: {fileID: 2070985073800464425}
   - component: {fileID: 6055494769210981337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
