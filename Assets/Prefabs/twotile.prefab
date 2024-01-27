@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5851962322721442359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: twotile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

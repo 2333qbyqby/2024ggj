@@ -12,6 +12,8 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     public UnityEvent playerJumpStartEvent;
     public UnityEvent playerJumpEndEvent;
     public UnityEvent playerInteractEvent;
+    public UnityEvent playerSaveEvent;
+    public UnityEvent playerLoadEvent;
     override public void Awake()
     {
         base.Awake();
@@ -21,6 +23,18 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         playerInputAction.Player.Jump.started += Jump_started;//给Player的jump动作执行后触发的事件添加函数4
         playerInputAction.Player.Jump.canceled += Jump_canceled;
         playerInputAction.Player.Interact.performed += Interact_performed;
+        playerInputAction.Player.Save.performed += Save_performed;
+        playerInputAction.Player.Load.performed += Load_performed;
+    }
+
+    private void Load_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        playerLoadEvent?.Invoke();
+    }
+
+    private void Save_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        playerSaveEvent?.Invoke();
     }
 
     private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
