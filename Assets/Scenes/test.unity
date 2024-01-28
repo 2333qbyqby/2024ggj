@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d35375774c1566468adfeb13ddd0ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appleCount: 0
+  dieUI: {fileID: 0}
 --- !u!4 &147094147
 Transform:
   m_ObjectHideFlags: 0
@@ -232,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 150644761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 0.03999996, z: -9.94552}
+  m_LocalPosition: {x: 8.6, y: 5.52, z: -9.94552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -686,7 +688,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 0.03999996, z: -9.94552}
+  m_LocalPosition: {x: 8.6, y: 5.52, z: -9.94552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,6 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 14b82370e1ab72644b661172066df39c, type: 2}
   playerAnimator: {fileID: 1237238254}
+  emojiController: {fileID: 0}
   _groundCheckPoint: {fileID: 2074358529}
   _groundCheckSize: {x: 0.49, y: 0.03}
   _frontWallCheckPoint: {fileID: 1415127030}
@@ -1165,7 +1168,7 @@ Transform:
   m_GameObject: {fileID: 988984346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: -1.96, z: 0.054480076}
+  m_LocalPosition: {x: 8.6, y: 3.52, z: 0.054480076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1257,7 +1260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a21df6148464748963021b1e2de73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emojiType: 0
   spriteRenderer: {fileID: 913475539}
+  count: 0
 --- !u!1 &991114023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1735,9 @@ MonoBehaviour:
   changeTreesEmoji:
     m_PersistentCalls:
       m_Calls: []
+  isChangeToFlower: 0
+  ifHit: 0
+  ifjumpSeveralTimes: 0
 --- !u!4 &1221082739
 Transform:
   m_ObjectHideFlags: 0
@@ -2187,6 +2195,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  playerSaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  playerLoadEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1295401669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6914734531095330864, guid: 73acf3e299c3fe14fbd7a90a658f41bf, type: 3}
@@ -2679,7 +2696,7 @@ GameObject:
   m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2692,7 +2709,7 @@ Transform:
   m_GameObject: {fileID: 2074358528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.062, y: -0.652, z: 0}
+  m_LocalPosition: {x: 0.072, y: -0.875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
