@@ -14,7 +14,7 @@ public class DieUI : MonoBehaviour
     public void ShowUI()
     {
         Sprite sprite = sprites[Random.Range(0, sprites.Count)];
-        this.gameObject.GetComponent<Image>().sprite = sprite;
+        this.gameObject.GetComponentInChildren<Image>().sprite = sprite;
         this.gameObject.SetActive(true);
 
     }

@@ -8,8 +8,8 @@ public class GameManager : MonoSingleton<GameManager>
 {
     [Header("玩家道具数量")]
     public int appleCount;
-    
 
+    public DieUI dieUI;
 
 
     public void ReStartGame()
@@ -29,6 +29,7 @@ public class GameManager : MonoSingleton<GameManager>
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             player.GetComponent<PlayerMovement>().playerAnimator.SetJump(false);
             player.GetComponent<PlayerMovement>().playerAnimator.SetDie(true);
+            dieUI.ShowUI();
             
         }
         

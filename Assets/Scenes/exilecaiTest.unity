@@ -720,6 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appleCount: 0
+  dieUI: {fileID: 0}
 --- !u!4 &147094147
 Transform:
   m_ObjectHideFlags: 0
@@ -4061,7 +4062,7 @@ Transform:
   m_GameObject: {fileID: 871375164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.3, y: 88.3, z: 0}
+  m_LocalPosition: {x: 64.3, y: 96.52, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10524,7 +10525,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -10634,7 +10635,7 @@ Transform:
   m_GameObject: {fileID: 4100590041893065941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.502304, y: 74.75, z: 0.4384615}
+  m_LocalPosition: {x: 64.502304, y: 82.51, z: 0.4384615}
   m_LocalScale: {x: 30, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10818,6 +10819,7 @@ GameObject:
   - component: {fileID: 2977757641806280185}
   - component: {fileID: 2207220171262850705}
   - component: {fileID: 2071806537947095980}
+  - component: {fileID: 4100590041893065942}
   m_Layer: 6
   m_Name: floor
   m_TagString: Untagged
@@ -10825,6 +10827,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!251 &4100590041893065942
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100590041893065941}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &4123841655039324859
 SpriteRenderer:
   m_ObjectHideFlags: 0

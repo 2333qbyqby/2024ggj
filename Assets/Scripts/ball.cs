@@ -8,6 +8,7 @@ public class ball : MonoBehaviour
     {
         if (collision.gameObject.layer ==7)
         {
+            GameManager.Instance.PlayerDeath(collision.gameObject);
             Debug.Log("«Ú‘“µΩ¡À»À");
             Destroy(gameObject);
         }

@@ -11,7 +11,6 @@ public class manholeCover : MonoBehaviour
         
         if (collision.gameObject.layer==7) 
         {
-            Debug.Log("·¢Éä");
             PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
             collision.gameObject.GetComponent<Rigidbody2D>().velocity=Vector2.zero;
             playerMovement.RefreshGravityScale();
