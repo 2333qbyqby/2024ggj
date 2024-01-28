@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using fivuvuvUtil;
 using UnityEngine.SceneManagement;
+using FivuvuvUtil;
 
 public class GameManager : MonoSingleton<GameManager>
 {
@@ -30,6 +31,7 @@ public class GameManager : MonoSingleton<GameManager>
             player.GetComponent<PlayerMovement>().playerAnimator.SetJump(false);
             player.GetComponent<PlayerMovement>().playerAnimator.SetDie(true);
             dieUI.ShowUI();
+            AudioManagerForGamejam.Instance.PlaySFX("death"+Random.Range(1,4));
             Invoke("ReStartGame", 0.5f);
             
         }

@@ -1,3 +1,4 @@
+using FivuvuvUtil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,7 @@ public class FlowerBasin : MonoBehaviour
     {
         if(collision.gameObject.layer == 7)
         {
+            AudioManagerForGamejam.Instance.PlaySFX("china");
             PlayerEmojiController playerEmojiController = collision.gameObject.GetComponent<PlayerEmojiController>();
             playerEmojiController.emojiType = EmojiType.horribleflower;
             Debug.Log("±ä»¨");

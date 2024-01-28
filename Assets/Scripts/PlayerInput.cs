@@ -20,6 +20,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         rb = GetComponent<Rigidbody>();
         playerInputAction = new InputSystem();//因为没有将脚本绑定给物体所以不用get component
         playerInputAction.Player.Enable();
+        playerInputAction.UI.Enable();
         playerInputAction.Player.Jump.started += Jump_started;//给Player的jump动作执行后触发的事件添加函数4
         playerInputAction.Player.Jump.canceled += Jump_canceled;
         playerInputAction.Player.Interact.performed += Interact_performed;

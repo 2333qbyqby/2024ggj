@@ -1,3 +1,4 @@
+using FivuvuvUtil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class CloudChangeSprite : MonoBehaviour
         {
             ChangeFace("cloud7");
             StartCoroutine(ReturnIdleStateCR());
+            AudioManagerForGamejam.Instance.PlaySFX("otto" + Random.Range(2, 4));
         }
     }
 
