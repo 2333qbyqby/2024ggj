@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: "\u6211\u4ECE\u6765\u6CA1\u89C9\u5F97\u505A\u6E38\u620F\u5F00\u5FC3\u8FC7"
   productName: 2024GGJ
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -153,7 +153,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.------------------------------------.2024GGJ
   buildNumber:
     Standalone: 0
     VisionOS: 0

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using fivuvuvUtil;
+using Unity.IO.LowLevel.Unsafe;
 
 public class PlayerInput : MonoSingleton<PlayerInput>
 {
@@ -14,6 +15,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     public UnityEvent playerInteractEvent;
     public UnityEvent playerSaveEvent;
     public UnityEvent playerLoadEvent;
+    public UnityEvent playerEscEvent;
     override public void Awake()
     {
         base.Awake();
@@ -26,6 +28,12 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         playerInputAction.Player.Interact.performed += Interact_performed;
         playerInputAction.Player.Save.performed += Save_performed;
         playerInputAction.Player.Load.performed += Load_performed;
+        playerInputAction.UI.Esc.performed += Esc_performed;
+    }
+
+    private void Esc_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        playerEscEvent?.Invoke();
     }
 
     private void Load_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -68,4 +76,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     {
         playerInputAction.Player.Disable();
     }
+
+
+    
 }

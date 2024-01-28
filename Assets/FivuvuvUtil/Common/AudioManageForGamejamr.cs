@@ -26,10 +26,6 @@ namespace FivuvuvUtil
                 audioClipDict.Add(audioClip.name, audioClip);
             }
         }
-        private void Start()
-        {
-            DontDestroyOnLoad(this);
-        }
         public void PlaySFX(string audioName)
         {
             SFXaudioSource.PlayOneShot(audioClipDict[audioName]);

@@ -11,8 +11,8 @@ public class EscUI : MonoBehaviour
 
     private void Start()
     {
-        restartButton.onClick.AddListener(() => { GameManager.Instance.ReStartGame(); });
-        backButton.onClick.AddListener(() => { GameManager.Instance.BackToMenu(); });
+        restartButton.onClick.AddListener(() => { Time.timeScale = 1; GameManager.Instance.ReStartGame(); });
+        backButton.onClick.AddListener(() => { Time.timeScale = 1; GameManager.Instance.BackToMenu(); });
         this.HideUI();
     }
 
@@ -25,4 +25,5 @@ public class EscUI : MonoBehaviour
     {
         this.gameObject.SetActive(true);
     }
+
 }
