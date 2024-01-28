@@ -13,6 +13,7 @@ public class DieUI : MonoBehaviour
     {
         RestartButton.onClick.AddListener(() => { GameManager.Instance.ReStartGame(); });
         BackButton.onClick.AddListener(() => { GameManager.Instance.BackToMenu(); });
+        this.HideUI();
     }
     public void ShowUI()
     {
