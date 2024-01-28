@@ -223,3 +223,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 5
   fallTime: 3
+  ifAdded: 0
+  brokenFlowerBasin: {fileID: 21300000, guid: 46e58d4a421f96848b2bc0543abf102b, type: 3}
