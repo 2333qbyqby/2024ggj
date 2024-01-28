@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appleCount: 0
-  dieUI: {fileID: 0}
+  dieUI: {fileID: 1846618184}
 --- !u!4 &147094147
 Transform:
   m_ObjectHideFlags: 0
@@ -1146,7 +1146,6 @@ GameObject:
   - component: {fileID: 211009364}
   - component: {fileID: 211009363}
   - component: {fileID: 211009362}
-  - component: {fileID: 211009361}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -1154,23 +1153,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &211009361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211009360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db08912ae5a6ad469e66456e3eb672c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 461ce42a06b4afb45b6de94eb133f172, type: 3}
-  - {fileID: 21300000, guid: a7a85bd376d4d724c8367fefec7411fd, type: 3}
-  - {fileID: 21300000, guid: 039a3b62b53862441889b10be11b6499, type: 3}
-  - {fileID: 21300000, guid: c9e58627a95b0c248934bfd2f5c6c16d, type: 3}
 --- !u!114 &211009362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9277,7 +9259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db08912ae5a6ad469e66456e3eb672c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: a7a85bd376d4d724c8367fefec7411fd, type: 3}
+  - {fileID: 21300000, guid: 039a3b62b53862441889b10be11b6499, type: 3}
+  - {fileID: 21300000, guid: c9e58627a95b0c248934bfd2f5c6c16d, type: 3}
 --- !u!1001 &1850914889
 PrefabInstance:
   m_ObjectHideFlags: 0

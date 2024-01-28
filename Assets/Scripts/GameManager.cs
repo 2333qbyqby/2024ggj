@@ -30,8 +30,11 @@ public class GameManager : MonoSingleton<GameManager>
             player.GetComponent<PlayerMovement>().playerAnimator.SetJump(false);
             player.GetComponent<PlayerMovement>().playerAnimator.SetDie(true);
             dieUI.ShowUI();
+            Invoke("ReStartGame", 0.5f);
             
         }
         
     }
+
+    
 }
